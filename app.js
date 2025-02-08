@@ -39,11 +39,11 @@ app.get("/contact",(req,res)=>{
 
 app.post("/prodata",async (req,res)=>{
 
-let {password,email,name,referelCode}=req.body
+let {password,email,name,referralCode}=req.body
 
-if(password && email && name && referelCode){	
+if(password && email && name && referralCode){	
 	
-	let newperson=new mongo_model({"name":name,"email":email,"password":password,"referrel":referelCode})
+	let newperson=new mongo_model({"name":name,"email":email,"password":password,"referral":referralCode})
 
 	if(!newperson){
 		res.status(404).json({staus:"failed"})
@@ -52,7 +52,7 @@ if(password && email && name && referelCode){
 	let data2=await newperson.save()
 	
 
-	mailit(email,name.split(" ")[0],data2["referrel"])
+	mailit(email,name.split(" ")[0],data2["referral"])
  res.status(200).json({staus:"success","token":data2["_id"]})
 	
 }else{
@@ -105,11 +105,11 @@ if(details){
 data={}
 data.name=details.name
 data.email=details.email
-data.referrel=details.referrel
+data.referral=details.referral
 	res.status(200).json(data)
 }
 else{
-res.status(400).json({"name":"None","email":"None","referrel":"None"})}
+res.status(400).json({"name":"None","email":"None","referral":"None"})}
 })
 
 //app.get("/sendEmailnow",(req,res)=>{
