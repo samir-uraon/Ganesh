@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Us</title>
+  <link rel="icon" type="image/svg+xml" href="../css/assets/logo3.png" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/assets/css/bootstrap.min.css">
+</head>
+<body>
+  
+  <section class="uf-contact-form-01 mx-auto">
+    <div class="container">
+        <div class="row justify-content-center bg-white rounded-4 shadow py-5 gx-5 px-lg-5">
+            <div class="col-md-6 text-center">
+                <h2 class="uf-ct-01-text-primary text-uppercase fw-bold">Contact Us</h2>
+                <p>Or reach out manually to <a href="mailto:vectorx06@gmail.com" class="text-decoration-none">vectorx06@gmail.com</a></p>
+                <img src="../css/images/plane.png" alt="" class="uf-img-contact-form-01 pt-4 d-md-block d-none">
+            </div>
+            <div class="col-md-6">
+                <form
+                action="https://formspree.io/f/xrbelkvd"
+                method="post"
+                onkeydown="return pressenterclose(event)">
+                <div class="mb-3">
+                <label for="uf-iname" class="form-label" >Your name</label>
+                <input type="text" class="form-control" id="uf-iname" name="username" required autocomplete="off">
+                </div>
+<div class="mb-3">
+<label for="uf-imail" class="form-label">Email address</label>
+<input type="email" class="form-control" id="uf-imail" name="Email" required autocomplete="off">
+</div>
+<div class="mb-3">
+<label for="uf-itextarea" class="form-label">Your message</label>
+<textarea class="form-control" id="uf-itextarea" rows="3" name="message" required autocomplete="off"></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+</body>
+<script src="../js/contact.js"></script>
+</html>
